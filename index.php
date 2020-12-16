@@ -2,12 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Google</title>
   </head>
   <body>
-    <h1>ciaooooo</h1>
     <?php
-      $text[
+      $text = [
         [
           "question" => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
           "answer" => "La recente decisione della Corte di giustizia dell'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.
@@ -40,7 +41,34 @@
 
         ],
       ];
-
+      foreach ($text as $key => $value) {
+        var_dump($key);
+        var_dump($value);
+      };
      ?>
+    <header>
+      <div class="header flex">
+        <div class="hLeft flex spAround marginSmall  gray">
+          <i class="fas fa-bars "></i>
+          <h2>Domande frequenti</h2>
+        </div>
+        <div class="hRight flex spAround">
+          <img src="./img/google-menu.png" alt="google">
+          <div class="user marginSmall">
+            D
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="text flex">
+        <h1><?php $key ?> </h1>
+        <p><?php $text ?></p>
+      </div>
+    </main>
+
+
+
+
   </body>
 </html>
